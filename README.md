@@ -6,6 +6,8 @@
 | Heros Of the Storm | Game | Passed | N/A |
 | Factorio | Game | Passed | N/A |
 | Satisfactory | Game | Passed | N/A |
+| Deep Rock Galactic Survivor | Game | Passed | N/A |
+| RTX 3070 | Drivers | Passed | Not installed from Nvidia |
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
