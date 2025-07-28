@@ -8,7 +8,7 @@
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
-| K70 RGB Pro V2 | Fail | Yes |
+| K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
 | Asus / Corsair Fans | Hardware Control | Testing | Unknown |
 
 
