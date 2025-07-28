@@ -5,6 +5,7 @@
 |------|------|--------| ---------- |
 | Heros Of the Storm | Game | Passed | N/A |
 | Factorio | Game | Passed | N/A |
+| Satisfactory | Game | Passed | N/A |
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
