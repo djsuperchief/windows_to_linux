@@ -12,7 +12,17 @@
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
-| Asus / Corsair Fans | Hardware Control | Testing | Unknown |
+| Asus / Corsair Fans | Hardware Control | Fail | Yes |
+
+### Testing Key
+
+| Status | Meaning |
+| ------ | ------- |
+| Passed | Works on Linux, no workaround needed |
+| Testing | Establishing if it works or a workaround can be used |
+| Fail | Does not work / cannot be controlled through Linux |
+| Fail - With workaround | Workaround found |
+| Partial | Most parts of this work with a couple of exceptions |
 
 
 ## Overview
@@ -70,6 +80,51 @@ Pin-Priority: -1
 ```
 I could then simply run `sudo apt install firefox`
 
-## More TO Come
-TBD
+## Steam Install
+Steam was installed through the discover app so no real config required.
 
+Steam setup later.
+
+## Discord
+Downloaded Discord `.deb` file and installed through `dpkg -i <.deb file>`.
+
+### Missing Dependencies
+With some installs there are missing dependencies. Once you have done the initial install using `dpkg` and it informs you of missing dependencies, simply run this command: `sudo apt-get -f install`.
+
+## OpenRGB
+My motherboard does not have a Linux app so any RGB needs to be controlled by something else. OpenRGB is the best option I have.
+
+This is something that you will have to probably do your own research on but when I opened it up for the first time, a couple of devices showed up that did not have an "LED Count". I managed to find that the front fans on my case (which were one of the devices found) have 16 LEDs per fan. As I have three I put the appropriate number in and left the rest (motherboard).
+
+### K70 RGB Pro V2
+This was picked up by openRGB but no matter what setting I chose, the lights on the keyboard did not respond. After an hour or so of playing around I went into the settings and turned all K70 keyboard options to disabled so openRGB did not try and control the keyboard.
+
+Set openRGB to open on startup and also set it to minimise when closed.
+
+### Final Note On OpenRGB
+It doesn't seem to load my profile when started so you will need to do that manually for the time being. Right click on the icon in the system tray and then load the profile you saved all your settings to.
+
+## K70 RGB Pro - Workaround
+The K70 actually has some lighting profiles installed to it so you can cycle through these by pressing and holding the `FN` button along with a number. As I like a solid yellow light, I pressed `FN 0` a couple of times and hey presto, it works. Suitable workaround found.
+
+## Case Fans
+The case fans seemed very quiet and this was a little concerning as the PC is not liquid cooled so airflow is very important. I tried using `lmsensors` and `fancontrol` but these could not pick the fans up.
+BIOS says the fans are in PWM mode which in theory means they should be picked up but I couldn't get that to work.
+
+However, in BIOS, the fan speed control is set to auto with the source as CPU which should mean when the CPU reaches a threshold they should speed up.
+
+## Moutning Windows ntfs3 Drives
+The drives I have everything stored on are formatted for Windows currently (ntfs 3) and can be used by Linux. It isn't the ideal format (obviously) and if I do the switch to Linux this will need to be changed. However for now, I just need to mount the drives for testing. I couldn't seem to set automount through GParted or the KDE Partition Manager so it is up to manual edits to fstab.
+
+```
+ls -l /dev/disk/by-uuid
+```
+The above lists the disks by UUID which you will need to add to fstab.
+[This](https://askubuntu.com/questions/46588/how-to-automount-ntfs-partitions) question and answer has a good detailed answer on what you need to do
+
+I KDE Partition Manager to help me identify which drive was which and mounted them to `/media/<my user>/<name>` where "my user" is my username and "name" is the name of the folder I want it in.
+
+Reboot and the drives are now mounted on login / startup.
+
+## Steam - Adding Existing Drives
+It's worth noting that Steam won't pick your drives up immediatly and you will need to add them manually. Go to Steam Settings > Storage and add the newly mounted drives here.
