@@ -80,6 +80,18 @@ Pin-Priority: -1
 ```
 I could then simply run `sudo apt install firefox`
 
+## Nvidia Drivers
+So there are many different instructions on what to do when it comes to Nvidia drivers and after reading through a few recommendations, the best option appeared to be "let the OS decide".
+Following [this](https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/#the-recommended-way-ubuntu-drivers-tool) article, I ran the following (each new terminal command will start `$`)
+
+```terminal
+$ sudo ubuntu-drivers list
+
+$ sudo ubuntu-drivers install
+```
+
+Now Nvidia do provide a file to download and run to install drivers but I saw several posts advising against that. For now i'll let the OS decide what works and leave it there.
+
 ## Steam Install
 Steam was installed through the discover app so no real config required.
 
