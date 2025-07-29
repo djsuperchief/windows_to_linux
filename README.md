@@ -13,6 +13,8 @@
 | OpenRGB | App | Partial | N/A |
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
 | Asus / Corsair Fans | Hardware Control | Fail | Yes |
+| Xbox One Wired Controller | Hardware | Pass | N/A |
+| G502 Hero Button Customisation | Hardware | Testing | - |
 
 ### Testing Key
 
@@ -159,3 +161,32 @@ Well my original mount to fstab was to `/media/<my user>/<name>` and this was th
 - If Cloud Sync fails, verify game contents and try Cloud Sync again
 
 That seemed to fix one game so I have a feeling cloud sync will now work for all games if i re-verify files.
+
+## Lutris
+
+I installed Lutris through the Discover app, this is required for Battle.net and other launchers like GOG, Ubisoft etc.
+
+## Battle.Net
+### Installing
+To install Battle.net I needed to go to [https://lutris.net/](https://lutris.net/), go to search and type in battle.net. The top result should be Battle.net by Blizzard Entertainment. Click into that and you should see an install button. This will trigger Lutris to install battle.net. Follow all the instructions given.
+
+### Configure
+To make sure you are running the correct version of Wine, go to the preferences, down to Runners, find Wine and click the second of the two buttons / icons (the one that sort of looks like a box opening).
+From here find `wine-10.8-staging-tkg-ntsync` or one that looks similar (at the time of writing, this was correct).
+
+### Installing
+
+I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
+
+## GAME TEST
+
+### Quick Tests
+A couple of games I booted just to make sure they actually ran. When running things like Satisfactory, Steam started to build Vulkan Shaders which if you touch the Steam window in any way it will stop the process and stop launching the game. I cancelled this for the time being and just booted it up. Loaded my latest save and....yep, works like a charm.
+
+Similar for Factorio.
+
+Deep Rock Galactic Survivor was a game I use my Xbox One controller for and I wanted to check the system picked it up. With absolutly no configuration it worked perfectly.
+
+### In Depth Test
+
+I launched Heros Of The Storm to do a couple of rounds in that with a friend. On average I was getting around 200 FPS and very little system drain. Nothing untoward and the game ran perfectly.
