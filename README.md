@@ -113,7 +113,7 @@ BIOS says the fans are in PWM mode which in theory means they should be picked u
 
 However, in BIOS, the fan speed control is set to auto with the source as CPU which should mean when the CPU reaches a threshold they should speed up.
 
-## Moutning Windows ntfs3 Drives
+## Mounting Windows ntfs3 Drives
 The drives I have everything stored on are formatted for Windows currently (ntfs 3) and can be used by Linux. It isn't the ideal format (obviously) and if I do the switch to Linux this will need to be changed. However for now, I just need to mount the drives for testing. I couldn't seem to set automount through GParted or the KDE Partition Manager so it is up to manual edits to fstab.
 
 ```
@@ -128,3 +128,4 @@ Reboot and the drives are now mounted on login / startup.
 
 ## Steam - Adding Existing Drives
 It's worth noting that Steam won't pick your drives up immediatly and you will need to add them manually. Go to Steam Settings > Storage and add the newly mounted drives here.
+I originally mounted the drives manually through KDEs file manager Dolphin and then added them into Steam. This worked initially but I may also need to unmount, reset steam and re-add again.
