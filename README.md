@@ -14,7 +14,7 @@
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
 | Asus / Corsair Fans | Hardware Control | Fail | Yes |
 | Xbox One Wired Controller | Hardware | Pass | N/A |
-| G502 Hero Button Customisation | Hardware | Testing | - |
+| G502 Hero Button Customisation | Hardware | Pass | N/A |
 
 ### Testing Key
 
@@ -121,6 +121,10 @@ It doesn't seem to load my profile when started so you will need to do that manu
 ## K70 RGB Pro - Workaround
 The K70 actually has some lighting profiles installed to it so you can cycle through these by pressing and holding the `FN` button along with a number. As I like a solid yellow light, I pressed `FN 0` a couple of times and hey presto, it works. Suitable workaround found.
 
+## Logitech G502 Hero
+
+Installed the app Piper from discover and this allowed me to customise the mouse and various options. I can consider this a success in terms of mouse hardware.
+
 ## Case Fans
 The case fans seemed very quiet and this was a little concerning as the PC is not liquid cooled so airflow is very important. I tried using `lmsensors` and `fancontrol` but these could not pick the fans up.
 BIOS says the fans are in PWM mode which in theory means they should be picked up but I couldn't get that to work.
@@ -203,3 +207,10 @@ Deep Rock Galactic Survivor was a game I use my Xbox One controller for and I wa
 ### In Depth Test
 
 I launched Heros Of The Storm to do a couple of rounds in that with a friend. On average I was getting around 200 FPS and very little system drain. Nothing untoward and the game ran perfectly.
+
+## End Of Day 3 - Lessons Learned
+
+- NTFS drives with games already installed are intermittent and can cause problems. Better to install from scratch.
+- Having issues with ISP which is marring a lot of the tests I am doing when it comes to gaming online. I have had to spend a lot of time determining if it is my machine, the switch, cables or the connection. Even though my ISP says there is a problem, the connection has seemed pretty stable in the day but now it seems to be dropping packets (around a 25% packet loss) at around 10pm every night. Suspect this is when the majority of the work is being done. Anyway this is not about my ISP it is about a trial move to Linux and it's just a shame I have internet connectivity issues.
+
+- In order to get the most out of the drives, they will need to be reformatted so I will have to find something to transfer files over and reformat drives.
