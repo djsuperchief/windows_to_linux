@@ -140,6 +140,15 @@ I KDE Partition Manager to help me identify which drive was which and mounted th
 
 Reboot and the drives are now mounted on login / startup.
 
+## Steam - Adding Existing Drives (NTFS IMPORTANT NOTES)
+So below you will see instructions for mounting existing drives to Steam and Kubuntu. Now whilst this is the way to do it, the drives I have are shared between Windows and Linux and they are formatted in NTFS. This format doesn't play well with Linux and so by auto mounting the drives in fstab, the permissions are set to the `root` user. Steam cannot work with this.
+You can also not reliably change the ownership of this mount without potentially damaging the Windows permissions.
+
+The only way to get this to work is to mount the drives manually and then add to Steam.
+What you may encounter is issues with syncing your cloud saves which will require you to download the game from scratch if the cloud sync fix doesn't work.
+
+At this point, I am already running on a 2TB drive for the trial so it would be better to not risk my Windows drives as they are and install what I want to test on the drive I have allocted for the OS and the test. Not ideal and not what would be a real world situation BUT for a test, this is fine. So by all means try the below Steam existing drives BUT ye be warned, here be dragons.
+
 ## Steam - Adding Existing Drives
 It's worth noting that Steam won't pick your drives up immediatly and you will need to add them manually. Go to Steam Settings > Storage and add the newly mounted drives here.
 I originally mounted the drives manually through KDEs file manager Dolphin and then added them into Steam. This worked initially but I may also need to unmount, reset steam and re-add again.
@@ -162,6 +171,8 @@ Well my original mount to fstab was to `/media/<my user>/<name>` and this was th
 
 That seemed to fix one game so I have a feeling cloud sync will now work for all games if i re-verify files.
 
+
+
 ## Lutris
 
 I installed Lutris through the Discover app, this is required for Battle.net and other launchers like GOG, Ubisoft etc.
@@ -173,6 +184,8 @@ To install Battle.net I needed to go to [https://lutris.net/](https://lutris.net
 ### Configure
 To make sure you are running the correct version of Wine, go to the preferences, down to Runners, find Wine and click the second of the two buttons / icons (the one that sort of looks like a box opening).
 From here find `wine-10.8-staging-tkg-ntsync` or one that looks similar (at the time of writing, this was correct).
+
+You will also need to configure the battle.net game in lutris to use this Wine version as well.
 
 ### Installing
 
