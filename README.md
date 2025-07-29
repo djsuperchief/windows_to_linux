@@ -122,10 +122,28 @@ ls -l /dev/disk/by-uuid
 The above lists the disks by UUID which you will need to add to fstab.
 [This](https://askubuntu.com/questions/46588/how-to-automount-ntfs-partitions) question and answer has a good detailed answer on what you need to do
 
-I KDE Partition Manager to help me identify which drive was which and mounted them to `/media/<my user>/<name>` where "my user" is my username and "name" is the name of the folder I want it in.
+I KDE Partition Manager to help me identify which drive was which and mounted them to `/mnt/<name>` where "name" is the name of the folder I want it in.
 
 Reboot and the drives are now mounted on login / startup.
 
 ## Steam - Adding Existing Drives
 It's worth noting that Steam won't pick your drives up immediatly and you will need to add them manually. Go to Steam Settings > Storage and add the newly mounted drives here.
 I originally mounted the drives manually through KDEs file manager Dolphin and then added them into Steam. This worked initially but I may also need to unmount, reset steam and re-add again.
+
+## Steam - Cloud Sync Problems
+So when testing Steam initially I manually mounted the drives through Dolphin (file manager) and added them to Steam. This worked perfectly fine, cloud sync sorted itself and all was well in the world. However, when I changed to auto mounted drives through fstab, cloud sync was a problem.
+
+### Why?
+Well my original mount to fstab was to `/media/<my user>/<name>` and this was the original place when they were mounted manually. Cloud sync would not work and kept failing. I also needed to change the mount point to `/mnt` to be a bit more consistent with how the system would work going forwards. The error, so I understand it, is that the mount has changed and the cloud sync couldn't now locate the original folder / game. I would need to re-do this all over again.
+
+### Fix - Assuming changes made to fstab
+- Close Steam
+- Unmount drives
+- Start Steam and check drives / folders not present
+- Restart system
+- Start Steam
+- Add folders / drives back to Steam
+- Try Cloud Sync
+- If Cloud Sync fails, verify game contents and try Cloud Sync again
+
+That seemed to fix one game so I have a feeling cloud sync will now work for all games if i re-verify files.
