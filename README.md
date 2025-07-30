@@ -15,6 +15,8 @@
 | Jetbrains Toolbox | App | Passed | N/A |
 | Visual Studio Code | App | Passed | N/A |
 | Rider | App | Testing | N/A |
+| FL Studio | DAW | TODO | - |
+| Ableton 11 | DAW | TODO | - |
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
 | Asus / Corsair Fans | Hardware Control | Pass | Yes |
 | Xbox One Wired Controller | Hardware | Pass | N/A |
