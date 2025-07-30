@@ -7,12 +7,16 @@
 | Factorio | Game | Passed | N/A |
 | Satisfactory | Game | Passed | N/A |
 | Deep Rock Galactic Survivor | Game | Passed | N/A |
+| Deadzone Rogue | Game | Passed | N/A |
 | RTX 3070 | Drivers | Passed | Not installed from Nvidia |
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
+| Jetbrains Toolbox | App | Passed | N/A |
+| Visual Studio Code | App | Passed | N/A |
+| Rider | App | Testing | N/A |
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
-| Asus / Corsair Fans | Hardware Control | Fail | Yes |
+| Asus / Corsair Fans | Hardware Control | Pass | Yes |
 | Xbox One Wired Controller | Hardware | Pass | N/A |
 | G502 Hero Button Customisation | Hardware | Pass | N/A |
 
@@ -30,6 +34,13 @@
 ## Overview
 
 I have made the decision to not upgrade to Windows 11 (for my own reasons) and will be left with few options. I want to document all the things that I am doing to migrate over to Linux with any potential gotchas, hardware issues and workarounds so that someone else may benefit from this. I will do my best to document as I go but a few things may get lost.
+
+## Notable Differences Between Linux And Windows
+- Machine boots faster
+- Runs cooler
+- Less memory consumed
+- Games experience, in a lot of cases, better FPS than Windows (not in all instances)
+- Steam games that "run on Linux" filter does not exlude any games in my library
 
 ## Use Case
 On my main machine I use it for light MS Office bits, development, gaming and music production.
@@ -123,13 +134,33 @@ The K70 actually has some lighting profiles installed to it so you can cycle thr
 
 ## Logitech G502 Hero
 
+### Piper
+![piper](./assets/piper.png)
+
 Installed the app Piper from discover and this allowed me to customise the mouse and various options. I can consider this a success in terms of mouse hardware.
+
+### Solaar
+
+![solaar](./assets/solaar.png)
+Solaar is another application that allows setup of other logitech devices. It doesn't allow you to customise the buttons on your mouse but it does have a wider range of support especially if you are using Logitech keyboards etc.
 
 ## Case Fans
 The case fans seemed very quiet and this was a little concerning as the PC is not liquid cooled so airflow is very important. I tried using `lmsensors` and `fancontrol` but these could not pick the fans up.
 BIOS says the fans are in PWM mode which in theory means they should be picked up but I couldn't get that to work.
 
 However, in BIOS, the fan speed control is set to auto with the source as CPU which should mean when the CPU reaches a threshold they should speed up.
+
+## Case Fans - Edit
+As it turned out, going into BIOS and checking that the fans were in PWM mode allowed Linux to be able to pick them up on the next reboot. `pmwconfig` did warn me about controlling them manually as they were set as automatic so I decided to leave them as they were.
+
+## Steam - Adding Existing Drives (NTFS IMPORTANT NOTES)
+So below you will see instructions for mounting existing NTFS drives to Steam and Kubuntu. Now whilst this is the way to do it, the drives I have are shared between Windows and Linux and they are formatted in NTFS. This format doesn't play well with Linux and so by auto mounting the drives in fstab, the permissions are set to the `root` user. Steam cannot work with this.
+You can also not reliably change the ownership of this mount without potentially damaging the Windows permissions.
+
+The only way to get this to work is to mount the drives manually and then add to Steam.
+What you may encounter is issues with syncing your cloud saves which will require you to download the game from scratch if the cloud sync fix doesn't work.
+
+At this point, I am already running on a 2TB drive for the trial so it would be better to not risk my Windows drives as they are and install what I want to test on the drive I have allocted for the OS and the test. Not ideal and not what would be a real world situation BUT for a test, this is fine. So by all means try the below Steam existing drives BUT ye be warned, here be dragons.
 
 ## Mounting Windows ntfs3 Drives
 The drives I have everything stored on are formatted for Windows currently (ntfs 3) and can be used by Linux. It isn't the ideal format (obviously) and if I do the switch to Linux this will need to be changed. However for now, I just need to mount the drives for testing. I couldn't seem to set automount through GParted or the KDE Partition Manager so it is up to manual edits to fstab.
@@ -143,15 +174,6 @@ The above lists the disks by UUID which you will need to add to fstab.
 I KDE Partition Manager to help me identify which drive was which and mounted them to `/mnt/<name>` where "name" is the name of the folder I want it in.
 
 Reboot and the drives are now mounted on login / startup.
-
-## Steam - Adding Existing Drives (NTFS IMPORTANT NOTES)
-So below you will see instructions for mounting existing drives to Steam and Kubuntu. Now whilst this is the way to do it, the drives I have are shared between Windows and Linux and they are formatted in NTFS. This format doesn't play well with Linux and so by auto mounting the drives in fstab, the permissions are set to the `root` user. Steam cannot work with this.
-You can also not reliably change the ownership of this mount without potentially damaging the Windows permissions.
-
-The only way to get this to work is to mount the drives manually and then add to Steam.
-What you may encounter is issues with syncing your cloud saves which will require you to download the game from scratch if the cloud sync fix doesn't work.
-
-At this point, I am already running on a 2TB drive for the trial so it would be better to not risk my Windows drives as they are and install what I want to test on the drive I have allocted for the OS and the test. Not ideal and not what would be a real world situation BUT for a test, this is fine. So by all means try the below Steam existing drives BUT ye be warned, here be dragons.
 
 ## Steam - Adding Existing Drives
 It's worth noting that Steam won't pick your drives up immediatly and you will need to add them manually. Go to Steam Settings > Storage and add the newly mounted drives here.
@@ -195,7 +217,7 @@ You will also need to configure the battle.net game in lutris to use this Wine v
 
 I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
 
-## GAME TEST
+## GAME TEST (1)
 
 ### Quick Tests
 A couple of games I booted just to make sure they actually ran. When running things like Satisfactory, Steam started to build Vulkan Shaders which if you touch the Steam window in any way it will stop the process and stop launching the game. I cancelled this for the time being and just booted it up. Loaded my latest save and....yep, works like a charm.
@@ -208,9 +230,10 @@ Deep Rock Galactic Survivor was a game I use my Xbox One controller for and I wa
 
 I launched Heros Of The Storm to do a couple of rounds in that with a friend. On average I was getting around 200 FPS and very little system drain. Nothing untoward and the game ran perfectly.
 
-## End Of Day 3 - Lessons Learned
+## Lessons Learned
 
 - NTFS drives with games already installed are intermittent and can cause problems. Better to install from scratch.
+
 - Having issues with ISP which is marring a lot of the tests I am doing when it comes to gaming online. I have had to spend a lot of time determining if it is my machine, the switch, cables or the connection. Even though my ISP says there is a problem, the connection has seemed pretty stable in the day but now it seems to be dropping packets (around a 25% packet loss) at around 10pm every night. Suspect this is when the majority of the work is being done. Anyway this is not about my ISP it is about a trial move to Linux and it's just a shame I have internet connectivity issues.
 
 - In order to get the most out of the drives, they will need to be reformatted so I will have to find something to transfer files over and reformat drives.
