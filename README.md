@@ -1,4 +1,8 @@
 # Windows To Linux
+## Percentage Chance of Permenant Move To Linux
+
+31 Jul 2025 - 100%
+
 ## Current State - Testing
 
 | Item | Type | Status | Workaround |
@@ -8,6 +12,8 @@
 | Satisfactory | Game | Passed | N/A |
 | Deep Rock Galactic Survivor | Game | Passed | N/A |
 | Deadzone Rogue | Game | Passed | N/A |
+| Deep Rock Galactic| Game | Passed | N/A |
+| Starship Troopers: Extermination | Game | Partial | - |
 | RTX 3070 | Drivers | Passed | Not installed from Nvidia |
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
@@ -42,7 +48,7 @@ I have made the decision to not upgrade to Windows 11 (for my own reasons) and w
 - Runs cooler
 - Less memory consumed
 - Games experience, in a lot of cases, better FPS than Windows (not in all instances)
-- Steam games that "run on Linux" filter does not exlude any games in my library
+- Steam games that "run on Linux" filter does not exclude any games in my library
 
 ## Use Case
 On my main machine I use it for light MS Office bits, development, gaming and music production.
@@ -202,7 +208,6 @@ That seemed to fix one game so I have a feeling cloud sync will now work for all
 
 
 ## Lutris
-
 I installed Lutris through the Discover app, this is required for Battle.net and other launchers like GOG, Ubisoft etc.
 
 ## Battle.Net
@@ -216,11 +221,9 @@ From here find `wine-10.8-staging-tkg-ntsync` or one that looks similar (at the 
 You will also need to configure the battle.net game in lutris to use this Wine version as well.
 
 ### Installing
-
 I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
 
 ## GAME TEST (1)
-
 ### Quick Tests
 A couple of games I booted just to make sure they actually ran. When running things like Satisfactory, Steam started to build Vulkan Shaders which if you touch the Steam window in any way it will stop the process and stop launching the game. I cancelled this for the time being and just booted it up. Loaded my latest save and....yep, works like a charm.
 
@@ -229,8 +232,15 @@ Similar for Factorio.
 Deep Rock Galactic Survivor was a game I use my Xbox One controller for and I wanted to check the system picked it up. With absolutly no configuration it worked perfectly.
 
 ### In Depth Test
-
 I launched Heros Of The Storm to do a couple of rounds in that with a friend. On average I was getting around 200 FPS and very little system drain. Nothing untoward and the game ran perfectly.
+
+## Game Test 30 Jul 2025
+### Starship Troopers: Extermination
+I managed to get into two games with friends and both of them ended up with me having to terminate the process. The game didn't crash but it equally wasn't responding either. Someone else that was playing at the time was also running the same distribution as me so the problem is unlikely to be Linux.
+Starship Troopers is known to be a bit of a buggy mess and it's not like I haven't had it crash on Windows _many_ times before. It could be that I need to have that game use a different version of Proton. I'll continue testing this but I genuinely don't think this is a Linux issue.
+
+### Deep Rock Galactic
+Not a single issue and I experienced a much higher framerate that on Windows. No drops in frames and no issues with gameplay. Controls all moved over with the game when I downloaded it. Thoroughly enjoyed playing with friends, i'll take this as a big win.
 
 ## Lessons Learned
 
