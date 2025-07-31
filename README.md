@@ -41,7 +41,7 @@
 ## Current Applications / Software
 
 | Application | Purpose | Location |
-| ----------- | ------- |
+| ----------- | ------- | --------- |
 | OpenRGB | Lighting hardware control for fans, motherboard etc | |
 | Lutris | Games outside Steam (Battle.net etc) | |
 | Steam | It's steam...| |
