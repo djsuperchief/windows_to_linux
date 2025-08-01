@@ -19,6 +19,7 @@
 | Battle.net | App | Passed | N/A |
 | OpenRGB | App | Partial | N/A |
 | Jetbrains Toolbox | App | Passed | N/A |
+| Rider | App / IDE | Passed | N/A |
 | Visual Studio Code | App | Passed | N/A |
 | OpenLinkHub | App | Passed | N/A |
 | Rider | App | Testing | N/A |
@@ -38,6 +39,7 @@
 | Fail | Does not work / cannot be controlled through Linux |
 | Fail - With workaround | Workaround found |
 | Partial | Most parts of this work with a couple of exceptions |
+| TODO | It is on the list of things to test |
 
 ## Current Applications / Software
 
@@ -237,6 +239,12 @@ I already had Diablo and Heros of the storm installed on my NTFS drives so I jus
 ![OpenLinkHub](./assets/OpenLinkHub.png)
 The [OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) was developed by someone needing to control their fans and RGB when they switched to Linux. I have found this to be significantly more responsive and easier to configure than OpenRGB. OpenRGB does have more support for more devices BUT for the devices I am trying to control (Fans and Keyboard), this is a much better application.
 
+## Rider
+Having installed the Jetbrains Toolbox from their website, I installed Rider and tested doing a build of [Kyameru](https://djsuperchief.github.io/Kyameru/). Some initial setup required (I forgot to setup .NET.....facepalm) but it again just worked.
+
+## Visual Studio Code
+No Issues
+
 ## GAME TEST (1)
 ### Quick Tests
 A couple of games I booted just to make sure they actually ran. When running things like Satisfactory, Steam started to build Vulkan Shaders which if you touch the Steam window in any way it will stop the process and stop launching the game. I cancelled this for the time being and just booted it up. Loaded my latest save and....yep, works like a charm.
@@ -256,6 +264,16 @@ Starship Troopers is known to be a bit of a buggy mess and it's not like I haven
 ### Deep Rock Galactic
 Not a single issue and I experienced a much higher framerate that on Windows. No drops in frames and no issues with gameplay. Controls all moved over with the game when I downloaded it. Thoroughly enjoyed playing with friends, i'll take this as a big win.
 
+## Game Test 31 July 2025
+### Deadzone Rogue
+1 hour play on this with no crashes. There was a reasonable FPS drop when the game became particulalry hectic on a endless run but I suspect I would have had the same problems on Windows as this was probably more of a limitation on my system than anything else.
+
+Happy that this is working.
+
+## Dune Awakening
+The Vulkan shaders were taking an age to compile and I never managed to let them finish. I do intend to try this at some point but i'll need to let the shaders compile.
+
+---
 
 ## Lessons Learned
 
@@ -264,3 +282,5 @@ Not a single issue and I experienced a much higher framerate that on Windows. No
 - Having issues with ISP which is marring a lot of the tests I am doing when it comes to gaming online. I have had to spend a lot of time determining if it is my machine, the switch, cables or the connection. Even though my ISP says there is a problem, the connection has seemed pretty stable in the day but now it seems to be dropping packets (around a 25% packet loss) at around 10pm every night. Suspect this is when the majority of the work is being done. Anyway this is not about my ISP it is about a trial move to Linux and it's just a shame I have internet connectivity issues.
 
 - In order to get the most out of the drives, they will need to be reformatted so I will have to find something to transfer files over and reformat drives.
+
+- Some things may need a mix of apps to get everything working. There might not be an all in one solution and you need to decide what you will use to solve what probelm (OpenRGB, Piper, Solaar, OpenLinkHub as prime examples of a few apps needed to do all the things)
