@@ -23,6 +23,7 @@
 | Visual Studio Code | App | Passed | N/A |
 | OpenLinkHub | App | Passed | N/A |
 | Rider | App | Testing | N/A |
+| Slack | App | Passed | N/A |
 | FL Studio | DAW | TODO | - |
 | Ableton 11 | DAW | TODO | - |
 | K70 RGB Pro V2 | Hardware RGB | Fail | Yes |
@@ -244,6 +245,9 @@ Having installed the Jetbrains Toolbox from their website, I installed Rider and
 
 ## Visual Studio Code
 No Issues
+
+## Slack
+It is important to note that I downloaded the .DEB version of Slack from their website. They don't make finding it easy but once installed, getting it up and running was fine.
 
 ## GAME TEST (1)
 ### Quick Tests
