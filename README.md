@@ -234,6 +234,7 @@ You will also need to configure the battle.net game in lutris to use this Wine v
 I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
 
 ## OpenLinkHub
+![OpenLinkHub](./assets/OpenLinkHub.png)
 The [OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) was developed by someone needing to control their fans and RGB when they switched to Linux. I have found this to be significantly more responsive and easier to configure than OpenRGB. OpenRGB does have more support for more devices BUT for the devices I am trying to control (Fans and Keyboard), this is a much better application.
 
 ## GAME TEST (1)
