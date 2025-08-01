@@ -20,6 +20,7 @@
 | OpenRGB | App | Partial | N/A |
 | Jetbrains Toolbox | App | Passed | N/A |
 | Visual Studio Code | App | Passed | N/A |
+| OpenLinkHub | App | Passed | N/A |
 | Rider | App | Testing | N/A |
 | FL Studio | DAW | TODO | - |
 | Ableton 11 | DAW | TODO | - |
@@ -232,6 +233,9 @@ You will also need to configure the battle.net game in lutris to use this Wine v
 ### Installing
 I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
 
+## OpenLinkHub
+The [OpenLinkHub](https://github.com/jurkovic-nikola/OpenLinkHub) was developed by someone needing to control their fans and RGB when they switched to Linux. I have found this to be significantly more responsive and easier to configure than OpenRGB. OpenRGB does have more support for more devices BUT for the devices I am trying to control (Fans and Keyboard), this is a much better application.
+
 ## GAME TEST (1)
 ### Quick Tests
 A couple of games I booted just to make sure they actually ran. When running things like Satisfactory, Steam started to build Vulkan Shaders which if you touch the Steam window in any way it will stop the process and stop launching the game. I cancelled this for the time being and just booted it up. Loaded my latest save and....yep, works like a charm.
@@ -250,6 +254,7 @@ Starship Troopers is known to be a bit of a buggy mess and it's not like I haven
 
 ### Deep Rock Galactic
 Not a single issue and I experienced a much higher framerate that on Windows. No drops in frames and no issues with gameplay. Controls all moved over with the game when I downloaded it. Thoroughly enjoyed playing with friends, i'll take this as a big win.
+
 
 ## Lessons Learned
 
