@@ -57,6 +57,10 @@
 
 I have made the decision to not upgrade to Windows 11 (for my own reasons) and will be left with few options. I want to document all the things that I am doing to migrate over to Linux with any potential gotchas, hardware issues and workarounds so that someone else may benefit from this. I will do my best to document as I go but a few things may get lost.
 
+## Install Instructions
+It is worth noting that where I can, I will detail install instructions but this is a log of my testing rather than a "how-to". If I decide that this is a permanant move then I will put some detailed instructions on common things including install instructions and fixes I have found to work.
+Not every fix will work for everyone and a case of milage may vary in terms of fixes. I will put down what worked for me based on my system but the fix I find may not work for you.
+
 ## Notable Differences Between Linux And Windows
 - Machine boots faster
 - Runs cooler
@@ -235,7 +239,7 @@ From here find `wine-10.8-staging-tkg-ntsync` or one that looks similar (at the 
 You will also need to configure the battle.net game in lutris to use this Wine version as well.
 
 ### Installing
-I already had Diablo and Heros of the storm installed on my NTFS drives so I just had to point the Battle.net app to those folders.
+I installed Diablo and Heros of the storm through the Battle.net installer as normal and accepted the default location (in a proper permenant world, this would be an external drive).
 
 ## OpenLinkHub
 ![OpenLinkHub](./assets/OpenLinkHub.png)
