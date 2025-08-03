@@ -14,6 +14,7 @@
 | Deadzone Rogue | Game | Passed | N/A |
 | Deep Rock Galactic| Game | Passed | N/A |
 | Starship Troopers: Extermination | Game | Partial | - |
+| Diablo 4 | Game | Testing | - |
 | RTX 3070 | Drivers | Passed | Not installed from Nvidia |
 | Steam | App | Passed | N/A |
 | Battle.net | App | Passed | N/A |
@@ -276,6 +277,15 @@ Happy that this is working.
 
 ## Dune Awakening
 The Vulkan shaders were taking an age to compile and I never managed to let them finish. I do intend to try this at some point but i'll need to let the shaders compile.
+
+## Game Test 02 Aug - 03 Aug
+## Doom 2016
+Updated the game to run on Vulkan instead of OpenGL (because I am on an RTX 3070 card). No issues, smooth and responsive and no crashes.
+
+### Diablo 4
+So this is still undergoing testing and I have experienced significant FPS drop and a strange issue where ground textures will just dissapear. I have changed the versions of things to see if it will make a difference but the only thing I can do that fixes both these issues is to change my graphics settings between Medium -> Low Ray Tracing -> Medium. This resolves any FPS issues I have and then ground textures come back...for a while before they dissapear again. What's even weirder is the ground textures are there when cut scenes are playing.
+
+I have tried without the high resolution textures and whilst this makes the game perform normally for a longer period of time, eventually the groun textures dissapear and FPS tanks until I change resolution from Medium to something else and back to Medium again. A bit of a pain at the moment but will endevour to find out what it is.
 
 ---
 
