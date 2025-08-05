@@ -226,7 +226,14 @@ That seemed to fix one game so I have a feeling cloud sync will now work for all
 
 
 ## Lutris
-I installed Lutris through the Discover app, this is required for Battle.net and other launchers like GOG, Ubisoft etc.
+### Add Flathub Repository
+It is important that you install Lutris from Flathub rather than using Ubuntu sources because the Ubuntu source (at time of writing) is not up to date and any common fixes will assume you are using the latest version.
+Follow [these](https://flathub.org/setup/Kubuntu) instructions to install Flathub repository.
+
+### Install Flathub
+You should now be able to find Lutris in Discover (you could before) but _before_ installing you need to ensure you are selecting the correct source for it by clicking on the sources drop down and selecting `Flathub`.
+
+![Lutris Install](./assets/lutris_install.png)]
 
 ## Battle.Net
 ### Installing
@@ -290,6 +297,29 @@ Updated the game to run on Vulkan instead of OpenGL (because I am on an RTX 3070
 So this is still undergoing testing and I have experienced significant FPS drop and a strange issue where ground textures will just dissapear. I have changed the versions of things to see if it will make a difference but the only thing I can do that fixes both these issues is to change my graphics settings between Medium -> Low Ray Tracing -> Medium. This resolves any FPS issues I have and then ground textures come back...for a while before they dissapear again. What's even weirder is the ground textures are there when cut scenes are playing.
 
 I have tried without the high resolution textures and whilst this makes the game perform normally for a longer period of time, eventually the groun textures dissapear and FPS tanks until I change resolution from Medium to something else and back to Medium again. A bit of a pain at the moment but will endevour to find out what it is.
+
+## Game Test 04 August
+### Starship Troopers
+I tried Starship Troopers Extermination again and this crashed 2 out of 2 games. I am still unable to play this and it is difficult to know if this is genuinly a system problem or whether it is the game because the game is known for its issues. I will continue to try and figure out something that enables me to play this.
+
+### Diablo 4
+More Diablo 4 testing happened with a few discoveries.
+First, ensuring I had Lutris installed correctly (from Flathub) allowed me to change a few more settings and allow me access to GE-Proton runner (not that this made a huge amount of difference). I still get the FPS drop and the dissapearing ground textures.
+
+After some research it appears as though Diablo 4, as of the last season update, has quite a bad memory leak. What I suspect is happening is that Diablo 4 runs out of VRAM and tries to spill over into System RAM and can't. The reason it might not be able to is because NVIDIA cards have an issue on Linux being able to allow spillover into System memory resulting in what I see. In Windows systems, this leads to a crash of the game, in Linux this eventually corrects itself and around every 20 minutes, FPS drops and ground textures dissapear.
+
+The way to "tell" Diablo 4 exactly how much memory it has to play with (and any Vulkan enabled game) is to add a `dxvk.conf` file adjacent (in the same folder) as the game executable. What this should do in theory is limit the Vulkan APIs to how much memory is usable in the system.
+
+The general advice is to have max memory set to around `85%` of your total VRAM and shared memory to around `1GB`. I have set this but Diablo 4 still thinks my shared memory is 8GB and allocates itself 20GB of usable shared memory.
+
+![Diablo Issues](./assets/diablo_issue.png)
+
+I suspect that Diablo 4 is ignoring the `dxvk.conf` file not by design but because the working folder has loaded everything in before it sees the dxvk.conf file. This could be due to the Battle.net launcher.
+
+One way to resolve this is to add an environment variable to Lutris to say exactly where the dxvk.conf file is and this is the next thing to try.
+
+### NVIDIA Issues
+NVIDIA acknowledges that, in Linux, it does have an issue with shared memory. This same issue is not seen in a system with an AMD gpu which is much better supported in Linux. I suspect that I am now starting to see NVIDIA Linux issues that haunt Linux gaming but a new GPU was always on the cards regardless of if I decided to move to Linux anyway (and it was always going to be an AMD gpu because of pricing and...you know...fires).
 
 ---
 
