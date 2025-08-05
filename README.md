@@ -318,6 +318,11 @@ I suspect that Diablo 4 is ignoring the `dxvk.conf` file not by design but becau
 
 One way to resolve this is to add an environment variable to Lutris to say exactly where the dxvk.conf file is and this is the next thing to try.
 
+### Diablo Potentially Ignoring dxvk.conf
+Diablo 4 may not be seeing or working with the `dxvk.conf` file because of the way it is being launched / run. In order to potentially fix this, I am specifying it as an environment variable in the hopes that later tests will enforce this file being loaded.
+
+![lutris config](./assets/lutris_dx_config.png)
+
 ### NVIDIA Issues
 NVIDIA acknowledges that, in Linux, it does have an issue with shared memory. This same issue is not seen in a system with an AMD gpu which is much better supported in Linux. I suspect that I am now starting to see NVIDIA Linux issues that haunt Linux gaming but a new GPU was always on the cards regardless of if I decided to move to Linux anyway (and it was always going to be an AMD gpu because of pricing and...you know...fires).
 
