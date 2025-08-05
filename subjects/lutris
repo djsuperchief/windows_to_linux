@@ -1,0 +1,21 @@
+# Lutris Installation And Management
+## Table Of Contents
+- [Overview](#overview)
+    - [Notes](#notes)
+- [What Version To Get](#what-version-to-get)
+
+
+## Overview
+Lutris is a tool, much like Steam, that allows you to manage and play your games from multiple different vendors. It manages versions of Wine and other "runners" so that you can concentrate on the thing that really matters...having fun.
+
+### Notes
+These instructions are specifically catered towards distributions based on Ubuntu but they will equally port over to other distributions.
+
+## What Version To get
+I installed my version pf Lutris through the Discover Store (initially) and what I found was that the version I had was two years out of date. This meant many of the features that I may need to change in order to get some games to work were missing.
+
+The best place ot get Lutris from is Flathub. In order to make Flathubs available for your distribution, follow the instructions [here](https://flathub.org/setup). Simply select the distribution that applies to you and get it installed.
+
+Once there, ensure that you select Flathub as the source to download from.
+
+![Flathub](../assets/lutris_install.png)
