@@ -11,20 +11,10 @@ nav_order: 1
 {: .text-center }
 Windows To Linux
 
-{: .note }
-> Welcome to the Kyameru documentation home. This is still relatively new and will constantly be being updated. The product is still in it's beta phase and is available on NuGet.
+# About
+This site is about moving from Windows to Linux as your main OS. It has a heavy focus on gaming as the driver for this move but it will also lightly cover development, office based apps and music production.
 
-## Status
-[![Build](https://github.com/djsuperchief/Kyameru/actions/workflows/build.yml/badge.svg)](https://github.com/djsuperchief/Kyameru/actions/workflows/build.yml)
-[![Coverage Status](https://coveralls.io/repos/github/djsuperchief/Kyameru/badge.svg?branch=main)](https://coveralls.io/github/djsuperchief/Kyameru?branch=main)
-![GitHub Tag](https://img.shields.io/github/v/tag/djsuperchief/kyameru)
-![Latest Github Release](https://img.shields.io/github/v/release/djsuperchief/kyameru?include_prereleases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+This was created because of my own need to move to Linux and is being actively worked on as I test Linux as a main OS.
 
-## Kyameru
-
-Kyameru is a processing engine built with heavy inspiration from Apache Camel. The general idea is that you have a "bucket" of ready made components that you can use in a processing chain for any incoming data. You have a FROM component that starts the chain of events. Processors that typically you build to process the data and then TO components to send the data to something.
-
-## Get Started
-
-All components are available from NuGet or you can download the source directly and reference it within your projects. The recommended way is to use NuGet; follow instructions [here](getting_started.md).
+# Updating
+I will update this site as I go along with various findings, tests and installation instructions for various hardware and software. This is not a defacto standard and I am far from an expert. It goes without saying that anything noted on this site is tried at your own risk and I accept no responsibility for anything going wrong. You should do your own research as well to ensure what you are doing is safe. That said, if I do something and it ends up going wrong, I will tell you about it so you are forewarned.
