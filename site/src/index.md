@@ -44,6 +44,9 @@ There is also the gap in terms of drivers and compatibility with my hardware. I'
 # What This Is Not
 This is **NOT** a bash Microsoft exercise. Windows will probably be fine for a large portion of the population but it isn't for me. I have used Windows as my main OS since Windows 95 and I have also used Windows 3.1. I use Linux and Mac day to day for work so I don't consider myself to have a bias for any of the OS's. I want to explore what my choices are so I don't have to move to Windows 11 and do what is right for me as a gamer, developer and music producer.
 
+# Instructions
+Please note that the instructions I am writing will be using Kubuntu so you will need to adapt them to the Linux version you have chosen.
+
 # Updating
 I will update this site as I go along with various findings, tests and installation instructions for various hardware and software. This is not a defacto standard and I am far from an expert. It goes without saying that anything noted on this site is tried at your own risk and I accept no responsibility for anything going wrong. You should do your own research as well to ensure what you are doing is safe. That said, if I do something and it ends up going wrong, I will tell you about it so you are forewarned.
 
