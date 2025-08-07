@@ -5,6 +5,10 @@ parent: Hardware
 ---
 
 # GPU - NVIDIA
+
+{: .warning}
+These are the steps I took, please do your own research before deciding to follow the article posted or this page.
+
 ## Drivers
 So this one is an interesting one. NVIDIA do provide their own drivers and there is a download link for Linux specifically but I read varying reports on the success of those drivers. Following [this](https://documentation.ubuntu.com/server/how-to/graphics/install-nvidia-drivers/#the-recommended-way-ubuntu-drivers-tool) documentation, I was able to get the NVIDIA drivers installed with very little issue. What this does is essentially let the OS decide what is best for the system and I think in this case, i'll let it.
 

@@ -4,6 +4,10 @@ title: Firefox Without Snap
 parent: Before Installing Software
 ---
 # Firefox Without Snap
+
+{: .warning}
+OPTIONAL - Only needed if you decided to disable Snap.
+
 ## Why Firefox
 Well I couldn't find a reliable way of installing chrome and firefox was much easier to install and get running. If you happen to have removed Snap then you will not be able to find it in Apt or your software manager.
 

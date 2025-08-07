@@ -97,6 +97,6 @@ aux_links_new_tab: true
 # nav_sort: case_insensitive # default, equivalent to nil
 nav_sort: case_sensitive
 
-#nav_external_links:
-#  - title: Windows To Linux on GitHub
-#    url: https://github.com/djsuperchief/windows_to_linux
+nav_external_links:
+  - title: ProtonDB
+    url: https://www.protondb.com/
