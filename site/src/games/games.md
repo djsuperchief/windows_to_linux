@@ -16,13 +16,13 @@ I am doing my own testing on games I play regularly and noting what works, what 
 
 | Game | State | Launcher | Comments |
 |:---- |: ---- |: ------- |: ------- |
-| Factorio | Working | Steam ||
+| Factorio | Working | Steam | The factory must grow |
 | Satisfactory | Working | Steam ||
 | Deep Rock Galactic | Working | Steam ||
 | Deep Rock Galactic Survivor | Working | Steam ||
-| Deadzone Rogue | Working | Steam ||
+| Deadzone Rogue | Working | Steam | [NVIDIA Fix Required](nvidia-fix) |
 | Hero's Of The Storm | Working | Lutris / Battle.net ||
-| Diablo 4 | Working | Lutris / Battle.net | NVIDIA Fix Required |
+| Diablo 4 | Working | Lutris / Battle.net | [NVIDIA Fix Required](nvidia-fix) |
 | Beyond All Reason | Working | Native Game ||
 | Doom 2016 | Working | Steam ||
 | Tabletop Simulator | Working | Steam ||
@@ -30,5 +30,10 @@ I am doing my own testing on games I play regularly and noting what works, what 
 | Starship Troopers: Extermination | Testing | Steam ||
 | Warhammer 40,000: Rogue Trader | Working | Steam ||
 | Subnautica | Working | Steam | High CPU and GPU |
+| Doom Eternal | Working | Steam ||
+| Resident Evil 4 (Remake) | Working | Steam ||
+| Warhammer 40,000: Darktide | Working | Steam ||
+| Diablo 3 | Working | Lutris / Battle.net ||
+
 
 {: .fs-6 .fw-300 }
