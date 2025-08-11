@@ -20,9 +20,9 @@ I am doing my own testing on games I play regularly and noting what works, what 
 | Satisfactory | Working | Steam ||
 | Deep Rock Galactic | Working | Steam ||
 | Deep Rock Galactic Survivor | Working | Steam ||
-| Deadzone Rogue | Working | Steam | [NVIDIA Fix Required](nvidia-fix) |
+| Deadzone Rogue | Working | Steam | [NVIDIA Fix Required](games/nvidia-fix) |
 | Hero's Of The Storm | Working | Lutris / Battle.net ||
-| Diablo 4 | Working | Lutris / Battle.net | [NVIDIA Fix Required](nvidia-fix) |
+| Diablo 4 | Working | Lutris / Battle.net | [NVIDIA Fix Required](games/nvidia-fix) |
 | Beyond All Reason | Working | Native Game ||
 | Doom 2016 | Working | Steam ||
 | Tabletop Simulator | Working | Steam ||
