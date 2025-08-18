@@ -34,6 +34,13 @@ I am doing my own testing on games I play regularly and noting what works, what 
 | Resident Evil 4 (Remake) | Working | Steam ||
 | Warhammer 40,000: Darktide | Working | Steam ||
 | Diablo 3 | Working | Lutris / Battle.net ||
-
+| Peak | Working | Steam ||
+| Warhammer 40,000: Dawn Of War - Definitive Edition | Working | Steam ||
+| Risk Of Rain 2 | Working | Steam | [R2 Mod Man Workaround](games/r2modman) |
+| V Rising | Working | Steam ||
+| Far Cry 5 | Working | Steam ||
+| The Last Of Us Part II | Working | Steam | `SteamDeck=1 %command%` (launch option) needed to make work |
+| The Elder Scrolls: Oblivion Remake | Testing | Steam ||
+| Crysis Remastered | Testing | Steam ||
 
 {: .fs-6 .fw-300 }
