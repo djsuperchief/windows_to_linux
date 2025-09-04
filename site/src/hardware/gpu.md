@@ -28,3 +28,14 @@ sudo ubuntu-drivers install
 And this will install all the drivers your OS thinks it needs.
 
 And that's it. You shouldn't need to do anything further.
+
+# GPU - AMD
+
+{: .warning}
+These are the steps I took, please do your own research before deciding to follow the article posted or this page.
+
+## Drivers
+Built into the OS
+
+## Fixes
+None

@@ -27,9 +27,9 @@ I am doing my own testing on games I play regularly and noting what works, what 
 | Doom 2016 | Working | Steam ||
 | Tabletop Simulator | Working | Steam ||
 | Dune Awakening | Working | Steam ||
-| Starship Troopers: Extermination | Testing | Steam ||
+| Starship Troopers: Extermination | Working | Steam |[NVIDIA Fix Required](games/nvidia-fix)|
 | Warhammer 40,000: Rogue Trader | Working | Steam ||
-| Subnautica | Working | Steam | High CPU and GPU |
+| Subnautica | Working | Steam | High CPU and GPU with NVIDIA |
 | Doom Eternal | Working | Steam ||
 | Resident Evil 4 (Remake) | Working | Steam ||
 | Warhammer 40,000: Darktide | Working | Steam ||
@@ -39,8 +39,12 @@ I am doing my own testing on games I play regularly and noting what works, what 
 | Risk Of Rain 2 | Working | Steam | [R2 Mod Man Workaround](games/r2modman) |
 | V Rising | Working | Steam ||
 | Far Cry 5 | Working | Steam ||
-| The Last Of Us Part II | Working | Steam | `SteamDeck=1 %command%` (launch option) needed to make work |
-| The Elder Scrolls: Oblivion Remake | Testing | Steam ||
-| Crysis Remastered | Testing | Steam ||
+| The Last Of Us Part II | Working | Steam | `SteamDeck=1 %command%` (launch option) needed to make work (NVIDIA ONLY, article coming soon)|
+| The Elder Scrolls: Oblivion Remake | Working | Steam ||
+| Crysis Remastered | Working | Steam ||
+| Star Wars Outlaws | Working | Steam ||
+| Warhammer 40,000: Dawn Of War II | Working | Steam ||
+| Aliens Dark Decent | Working | Steam ||
+
 
 {: .fs-6 .fw-300 }
