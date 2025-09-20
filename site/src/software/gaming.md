@@ -31,5 +31,5 @@ Alternatively you can install it by [downloading](https://lutris.net/downloads) 
 
 # R2modman
 
-[R2modman](https://r2modman.com/) is a popular modding client that allows you to add mods to some of your games. I use it for `Peak` and `Risk Of Rain 2`.
-I would advise to download the `AppImage` from their download page.
+[R2modman](https://github.com/ebkr/r2modmanPlus) is a popular modding client that allows you to add mods to some of your games. I use it for `Peak` and `Risk Of Rain 2`.
+Download from their releases page of Github.
